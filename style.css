@@ -86,4 +86,292 @@
 .section p {
     font-family: Arial, sans-serif;
     font-size: 16px;
+    color: #fff;
+    line-height: 1.5;
 }
+
+.slider {
+    width: 100%; /* Relative width */
+    height: 50%; /* Relative height */
+    position: relative; /* Relative position */
+}
+
+.slide {
+    width: 100%; /* Relative width */
+    height: 100%; /* Relative height */
+    position: absolute; /* Absolute position */
+    top: 0;
+    left: 0;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.5s; /* Smooth transition */
+}
+
+.slide.active {
+    opacity: 1; /* Visible when active */
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute; /* Absolute position */
+    bottom: 10px;
+    width: 100%;
+}
+
+.controls span {
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+    margin: 0 10px;
+}
+
+.player {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+.player i {
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+    margin: 0 10px;
+}
+
+.player #play {
+    display: none; /* Hidden by default */
+}
+
+.player #pause {
+    display: block; /* Visible by default */
+}
+
+.player #mute {
+    display: block; /* Visible by default */
+}
+
+.form-group {
+    margin: 10px 0;
+}
+
+.form-group label {
+    display: block;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+.form-group button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-group button:hover {
+    background-color: #fff;
+    color: #333;
+    transform: scale(1.1);
+    transition: all 0.3s;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e); /* A dark blue color gradient */
+    border-radius: 10px; /* Rounded edges */
+}
+
+.footer p {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #fff;
+}
+
+.footer video {
+    width: 200px;
+    height: 150px;
+}
+
+/* Media queries for responsiveness */
+
+@media (max-width: 768px) {
+    /* For tablets and smaller screens */
+    .container {
+        width: 100%; /* Full width */
+        height: auto; /* Auto height */
+    }
+
+    .header {
+        flex-direction: column; /* Stack the elements vertically */
+    }
+
+    .header h1 {
+        text-align: center; /* Center the text */
+    }
+
+    .header nav {
+        margin-top: 10px; /* Add some space */
+    }
+
+    .header nav ul {
+        flex-direction: column; /* Stack the links vertically */
+    }
+
+    .header nav ul li {
+        margin: 5px 0; /* Add some space */
+    }
+
+    .content {
+        padding: 10px; /* Reduce the padding */
+    }
+
+    .section {
+        margin: 10px 0; /* Reduce the margin */
+    }
+
+    .section h2 {
+        font-size: 24px; /* Reduce the font size */
+    }
+
+    .section p {
+        font-size: 14px; /* Reduce the font size */
+    }
+
+    .slider {
+        height: 25%; /* Reduce the height */
+    }
+
+    .player {
+        width: 150px; /* Reduce the width */
+        height: 30px; /* Reduce the height */
+    }
+
+    .player i {
+        font-size: 18px; /* Reduce the font size */
+        margin: 0 5px; /* Reduce the margin */
+    }
+
+    .form-group {
+        margin: 5px 0; /* Reduce the margin */
+    }
+
+    .form-group label {
+        font-size: 14px; /* Reduce the font size */
+        margin-bottom: 3px; /* Reduce the margin */
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 14px; /* Reduce the font size */
+        padding: 5px; /* Reduce the padding */
+    }
+
+    .form-group button {
+        font-size: 14px; /* Reduce the font size */
+        padding: 5px; /* Reduce the padding */
+    }
+
+    .footer {
+        flex-direction: column; /* Stack the elements vertically */
+    }
+
+    .footer p {
+        text-align: center; /* Center the text */
+        margin-bottom: 10px; /* Add some space */
+    }
+
+    .footer video {
+        width: 150px; /* Reduce the width */
+        height: 100px; /* Reduce the height */
+    }
+}
+
+@media (max-width: 480px) {
+    /* For phones and smaller screens */
+    .logo {
+        width: 50px; /* Reduce the width */
+        height: 50px; /* Reduce the height */
+    }
+
+    .header h1 {
+        font-size: 24px; /* Reduce the font size */
+    }
+
+    .header nav ul li a {
+        font-size: 14px; /* Reduce the font size */
+        padding: 5px; /* Reduce the padding */
+    }
+
+    .section h2 {
+        font-size: 20px; /* Reduce the font size */
+    }
+
+    .section p {
+        font-size: 12px; /* Reduce the font size */
+    }
+
+    .slider {
+        height: 20%; /* Reduce the height */
+    }
+
+    .controls span {
+        font-size: 18px; /* Reduce the font size */
+        margin: 0 5px; /* Reduce the margin */
+    }
+
+    .player {
+        width: 100px; /* Reduce the width */
+        height: 20px; /* Reduce the height */
+    }
+
+    .player i {
+        font-size: 12px; /* Reduce the font size */
+        margin: 0 3px; /* Reduce the margin */
+    }
+
+    .form-group label {
+        font-size: 12px; /* Reduce the font size */
+        margin-bottom: 2px; /* Reduce the margin */
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 12px; /* Reduce the font size */
+        padding: 3px; /* Reduce the padding */
+    }
+
+    .form-group button {
+        font-size: 12px; /* Reduce the font size */
+        padding: 3px; /* Reduce the padding */
+    }
+
+    .footer p {
+        font-size: 12px; /* Reduce the font size */
+        padding: 3px; /* Reduce the padding */
+    }}
