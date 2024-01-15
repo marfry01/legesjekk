@@ -1,4 +1,4 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -171,5 +171,3 @@
 .library ul li {
     margin: 0 10px;
 }
-
-.library ul li a
