@@ -5,16 +5,31 @@ var audio = document.getElementById("audio");
 var links = document.querySelectorAll(".library a");
 
 // Add a click event listener to each link
-links.forEach(function(link) {
-    link.addEventListener("click", function(event) {
-        // Prevent the default action of opening the song in a new window
-        event.preventDefault();
-        // Change the source of the audio element to the href of the link
-        audio.src = this.href;
-        // Play the audio element
-        audio.play();
-    });
-});
+console.clear();
+
+class musicPlayer {
+	constructor() {
+		this.play = this.play.bind(this);
+		this.playBtn = document.getElementById('play');
+		this.playBtn.addEventListener('click', this.play);
+		this.controlPanel = document.getElementById('control-panel');
+		this.infoBar = document.getElementById('info');
+	}
+
+	play() {
+		let controlPanelObj = this.controlPanel,
+		infoBarObj = this.infoBar
+		Array.from(controlPanelObj.classList).find(function(element){
+					return element !== "active" ? controlPanelObj.classList.add('active') : 		controlPanelObj.classList.remove('active');
+			});
+		
+		Array.from(infoBarObj.classList).find(function(element){
+					return element !== "active" ? infoBarObj.classList.add('active') : 		infoBarObj.classList.remove('active');
+			});
+	}
+}
+
+const newMusicplayer = new musicPlayer();
 
 // Get the slides
 var slides = document.querySelectorAll(".slide");
