@@ -5,8 +5,10 @@
 }
 
 .container {
-    width: 80%;
+    width: 800px; /* Fixed width */
+    height: 600px; /* Fixed height */
     margin: 0 auto;
+    overflow: hidden; /* Hide the overflow */
 }
 
 .header {
@@ -50,29 +52,15 @@
     font-size: 18px;
     color: #fff;
     text-decoration: none;
+    border-radius: 5px; /* Rounded corners */
 }
 
 .header nav ul li a:hover {
-    background-color: #fff;
-    color: #333;
-    transform: scale(1.1);
-    transition: all 0.3s;
-}
-
-.header nav ul li a.active {
-    background-color: #fff;
-    color: #333;
-}
-
-.content {
-    padding: 20px;
-}
-
-.section {
-    margin: 20px 0;
-    border-radius: 10px; /* Rounded edges */
-}
-
-.section h2 {
-    font-family:'Times New Roman', Times, serif
+    display: block;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: darkmagenta ;
+    text-decoration: none;
+    border-radius: 5px;
 }
