@@ -9,12 +9,15 @@
     <script src="script.js"></script>
 </head>
 <body>
-    <div class="container"> <!-- Added a fixed width and height and overflow hidden -->
+    <div class="container"> <!-- Added a max-width and a center alignment -->
         <div class="header">
             <img src="logo.png" alt="Logo" class="logo"> <!-- Added a logo image -->
-            <h1>Frydenborg</h1>
+            <h1>FRYDENBORG</h1>
             <nav>
-                <ul>
+                <div class="menu-icon"> <!-- Added a div element for the menu icon -->
+                    <i class="fas fa-bars"></i> <!-- Added an icon for the menu icon -->
+                </div>
+                <ul class="menu"> <!-- Added a class for the menu -->
                     <li><a href="#main" class="active">Main</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#music">Music</a></li>
@@ -45,23 +48,23 @@
             </div>
             <div id="music" class="section"> <!-- Added a display none property -->
                 <h2>Our Music</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lorem eu lorem consequat consequat. Morbi vitae leo quis nisi tincidunt tincidunt. Fusce quis augue id lorem sagittis ullamcorper. Quisque id nisl ut nisi aliquet ultrices. Donec quis lacus ut justo ullamcorper ullamcorper. Nulla facilisi.</p>
-                <div class="player"> <!-- Added a display none property and replaced the select element with a div element and added some icons for the play, pause, and mute buttons -->
-                    <i id="play" class="fas fa-play"></i>
-                    <i id="pause" class="fas fa-pause"></i>
-                    <i id="mute" class="fas fa-volume-mute"></i>
-                    <div class="library">
-                        <ul>
-                            <li><a href="song1.wav">Song 1</a></li>
-                            <li><a href="song2.wav">Song 2</a></li>
-                            <li><a href="song3.wav">Song 3</a></li>
-                        </ul>
+                <form>
+                    <div class="form-group">
+                        <label for="library">Choose a song:</label>
+                        <select id="library" name="library">
+                            <option value="song1.wav">Song 1</option>
+                            <option value="song2.wav">Song 2</option>
+                            <option value="song3.mp3">Song 3</option>
+                        </select>
                     </div>
-                </div>
+                    <div class="form-group">
+                        <button type="submit">Play</button>
+                    </div>
+                </form>
+                <audio id="audio" src="" controls></audio>
             </div>
             <div id="contact" class="section">
                 <h2>Contact Us</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lorem eu lorem consequat consequat. Morbi vitae leo quis nisi tincidunt tincidunt. Fusce quis augue id lorem sagittis ullamcorper. Quisque id nisl ut nisi aliquet ultrices. Donec quis lacus ut justo ullamcorper ullamcorper. Nulla facilisi.</p>
                 <form>
                     <div class="form-group">
                         <label for="name">Name</label>
@@ -87,7 +90,13 @@
         </div>
         <div class="footer">
             <p>© 2024 Frydenborg. All rights reserved.</p>
-            <video id="video" src="video.mkv" autoplay muted controls></video> <!-- Added a video element and some attributes -->
+            <video id="video" src="video.mp4" autoplay muted controls></video> <!-- Added a video element and some attributes -->
+            <div class="contact"> <!-- Added a div element and some paragraphs for the contact information -->
+                <p>Phone: +47-988-33-559</p>
+                <p>E-mail: info@frydenborg.no</p>
+                <p>Address: 123 Main Street, Norway</p>
+            </div>
+            <button id="top" onclick="topFunction()">↑</button> <!-- Added a button element and some attributes for the floatable button -->
         </div>
     </div>
 </body>

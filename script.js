@@ -1,35 +1,64 @@
 // Get the audio element
 var audio = document.getElementById("audio");
 
-// Get the library links
-var links = document.querySelectorAll(".library a");
+// Get the library select element
+var library = document.getElementById("library");
 
-// Add a click event listener to each link
-console.clear();
+// Add a change event listener to the library select element
+library.addEventListener("change", function() {
+    // Change the source of the audio element to the value of the library select element
+    audio.src = this.value;
+    // Play the audio element
+    audio.play();
+});
 
-class musicPlayer {
-	constructor() {
-		this.play = this.play.bind(this);
-		this.playBtn = document.getElementById('play');
-		this.playBtn.addEventListener('click', this.play);
-		this.controlPanel = document.getElementById('control-panel');
-		this.infoBar = document.getElementById('info');
-	}
+// Get the play and pause icons
+var play = document.getElementById("play");
+var pause = document.getElementById("pause");
 
-	play() {
-		let controlPanelObj = this.controlPanel,
-		infoBarObj = this.infoBar
-		Array.from(controlPanelObj.classList).find(function(element){
-					return element !== "active" ? controlPanelObj.classList.add('active') : 		controlPanelObj.classList.remove('active');
-			});
-		
-		Array.from(infoBarObj.classList).find(function(element){
-					return element !== "active" ? infoBarObj.classList.add('active') : 		infoBarObj.classList.remove('active');
-			});
-	}
-}
+// Add a click event listener to the play icon
+play.addEventListener("click", function() {
+    // Play the audio element
+    audio.play();
+    // Hide the play icon
+    play.style.display = "none";
+    // Show the pause icon
+    pause.style.display = "block";
+});
 
-const newMusicplayer = new musicPlayer();
+// Add a click event listener to the pause icon
+pause.addEventListener("click", function() {
+    // Pause the audio element
+    audio.pause();
+    // Show the play icon
+    play.style.display = "block";
+    // Hide the pause icon
+    pause.style.display = "none";
+});
+
+// Get the mute and unmute icons
+var mute = document.getElementById("mute");
+var unmute = document.getElementById("unmute");
+
+// Add a click event listener to the mute icon
+mute.addEventListener("click", function() {
+    // Mute the audio element
+    audio.muted = true;
+    // Hide the mute icon
+    mute.style.display = "none";
+    // Show the unmute icon
+    unmute.style.display = "block";
+});
+
+// Add a click event listener to the unmute icon
+unmute.addEventListener("click", function() {
+    // Unmute the audio element
+    audio.muted = false;
+    // Show the mute icon
+    mute.style.display = "block";
+    // Hide the unmute icon
+    unmute.style.display = "none";
+});
 
 // Get the slides
 var slides = document.querySelectorAll(".slide");
@@ -83,9 +112,9 @@ function playNextSong() {
     // Get the index of the current song
     var currentSong = audio.src;
     var currentIndex = -1;
-    // Loop through the links to find the index of the current song
-    for (var i = 0; i < links.length; i++) {
-        if (links[i].href == currentSong) {
+    // Loop through the options to find the index of the current song
+    for (var i = 0; i < library.options.length; i++) {
+        if (library.options[i].value == currentSong) {
             currentIndex = i;
             break;
         }
@@ -97,11 +126,11 @@ function playNextSong() {
     // Increase the index by 1
     currentIndex++;
     // If the index is greater than the last song, set it to 0
-    if (currentIndex > links.length - 1) {
+    if (currentIndex > library.options.length - 1) {
         currentIndex = 0;
     }
-    // Get the next song from the link with the updated index
-    var nextSong = links[currentIndex].href;
+    // Get the next song from the option with the updated index
+    var nextSong = library.options[currentIndex].value;
     // Change the source of the audio element to the next song
     audio.src = nextSong;
     // Play the audio element
@@ -113,3 +142,52 @@ audio.addEventListener("ended", playNextSong);
 
 // Set an interval to call the nextSlide function every 3 seconds
 setInterval(nextSlide, 3000);
+
+// Get the menu icon and the menu
+var menuIcon = document.querySelector(".menu-icon");
+var menu = document.querySelector(".menu");
+
+// Add a click event listener to the menu icon
+menuIcon.addEventListener("click", function() {
+    // Toggle the display of the menu
+    menu.style.display = menu.style.display == "block" ? "none" : "block";
+});
+
+// Get the menu links
+var menuLinks = document.querySelectorAll(".menu a");
+
+// Add a click event listener to each menu link
+menuLinks.forEach(function(menuLink) {
+    menuLink.addEventListener("click", function(event) {
+        // Prevent the default action of opening the section in the same page
+        event.preventDefault();
+        // Get the href of the menu link
+        var href = this.href;
+        // Get the section name from the href
+        var section = href.split("#")[1];
+        // Load the HTML file for the section
+        window.location.href = section + ".html";
+    });
+});
+
+// Get the top button
+var topButton = document.getElementById("top");
+
+// Add a click event listener to the top button
+topButton.addEventListener("click", function() {
+    // Scroll the website to the top
+    window.scrollTo(0, 0);
+});
+
+// Add a scroll event listener to the window
+window.addEventListener("scroll", function() {
+    // Get the scroll position
+    var scrollPosition = window.pageYOffset;
+    // If the scroll position is greater than 0, show the top button
+    if (scrollPosition > 0) {
+        topButton.style.display = "block";
+    } else {
+        // Otherwise, hide the top button
+        topButton.style.display = "none";
+    }
+});
