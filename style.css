@@ -66,7 +66,6 @@
 
 .content {
     padding: 20px;
-    background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* A darker color gradient */
 }
 
 .section {
@@ -75,13 +74,5 @@
 }
 
 .section h2 {
-    font-family: Arial, sans-serif;
-    font-size: 28px;
-    color: #fff;
-    margin-bottom: 10px;
-}
-
-.section p {
-    font-family: Arial, sans-serif;
-
+    font-family:'Times New Roman', Times, serif
 }

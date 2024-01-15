@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frydenborg</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Added a meta tag for responsiveness -->
+    <title>FRYDENBORG</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
@@ -34,8 +34,8 @@
                     </div>
                 </div>
                 <div class="info">
-                    <h2>Welcome to Frydenborg</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lorem eu lorem consequat consequat. Morbi vitae leo quis nisi tincidunt tincidunt. Fusce quis augue id lorem sagittis ullamcorper. Quisque id nisl ut nisi aliquet ultrices. Donec quis lacus ut justo ullamcorper ullamcorper. Nulla facilisi.</p>
+                    <h2>Velkommen til Frydenborg</h2>
+                    <p>Et familievennlig sted.</p>
                 </div>
             </div>
             <div id="services" class="section">
@@ -47,15 +47,16 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lorem eu lorem consequat consequat. Morbi vitae leo quis nisi tincidunt tincidunt. Fusce quis augue id lorem sagittis ullamcorper. Quisque id nisl ut nisi aliquet ultrices. Donec quis lacus ut justo ullamcorper ullamcorper. Nulla facilisi.</p>
                 <div class="player">
                     <audio id="audio" controls autoplay loop> <!-- Added autoplay and loop attributes -->
-                        <source src="song.wav" type="audio/mpeg">
+                        <source src="song1.wav" type="audio/mpeg">
+                        <source src="song2.wav" type="audio/mpeg">
                         Your browser does not support the audio element.
                     </audio>
                 </div>
                 <div class="library">
                     <ul>
-                        <li><a href="song1.wav">Song 1</a></li>
-                        <li><a href="song2.wav">Song 2</a></li>
-                        <li><a href="song3.wav">Song 3</a></li>
+                        <li><a href="#audio">Song 1</a></li> <!-- Changed the href attribute to the id of the audio element -->
+                        <li><a href="#audio">Song 2</a></li>
+                        <li><a href="#audio">Song 3</a></li>
                     </ul>
                 </div>
             </div>
@@ -81,8 +82,11 @@
                 </form>
             </div>
             <div id="about" class="section">
-                <h2>About Us</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lorem eu lorem consequat consequat. Morbi vitae leo quis nisi tincidunt tincidunt. Fusce quis augue id lorem sagittis ullamcorper. Quisque id nisl ut nisi aliquet ultrices. Donec quis lacus ut justo ullamcorper ullamcorper. Nulla facilisi.</p>
+                <h2>Om oss</h2>
+                <p>28 har Frydenborg som sitt etternavn. Det vil si at  henhold til navneloven kan du ikke fritt skifte etternavn til et navn som det er 200 eller færre folkeregistrerte nordmenn som har.</p>
+                <p><link rel="stylesheet" href="https://www.ssb.no/befolkning/navn/statistikk/navn/artikler/etternavn">Statstisk sentralbyrå</p>
+                <p><embed src="https://no.geneanet.org/etternavn/FRYDENBORG" type=""></p>
+                <p></p>
             </div>
         </div>
         <div class="footer">
