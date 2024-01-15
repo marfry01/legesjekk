@@ -14,13 +14,14 @@
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    background-color: #f0f0f0;
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e); /* A dark blue color gradient */
+    border-radius: 10px; /* Rounded edges */
 }
 
 .header h1 {
     font-family: Arial, sans-serif;
     font-size: 32px;
-    color: #333;
+    color: #fff;
 }
 
 .header nav {
@@ -41,20 +42,20 @@
     padding: 10px;
     font-family: Arial, sans-serif;
     font-size: 18px;
-    color: #333;
+    color: #fff;
     text-decoration: none;
 }
 
 .header nav ul li a:hover {
-    background-color: #333;
-    color: #fff;
+    background-color: #fff;
+    color: #333;
     transform: scale(1.1);
     transition: all 0.3s;
 }
 
 .header nav ul li a.active {
-    background-color: #333;
-    color: #fff;
+    background-color: #fff;
+    color: #333;
 }
 
 .content {
@@ -63,6 +64,7 @@
 
 .section {
     margin: 20px 0;
+    border-radius: 10px; /* Rounded edges */
 }
 
 .section h2 {
@@ -168,3 +170,6 @@
 
 .library ul li {
     margin: 0 10px;
+}
+
+.library ul li a
