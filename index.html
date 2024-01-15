@@ -42,22 +42,15 @@
                 <h2>Our Services</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lorem eu lorem consequat consequat. Morbi vitae leo quis nisi tincidunt tincidunt. Fusce quis augue id lorem sagittis ullamcorper. Quisque id nisl ut nisi aliquet ultrices. Donec quis lacus ut justo ullamcorper ullamcorper. Nulla facilisi.</p>
             </div>
-            <div id="music" class="section">
+            <div id="music" class="section"> <!-- Added a display none property -->
                 <h2>Our Music</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lorem eu lorem consequat consequat. Morbi vitae leo quis nisi tincidunt tincidunt. Fusce quis augue id lorem sagittis ullamcorper. Quisque id nisl ut nisi aliquet ultrices. Donec quis lacus ut justo ullamcorper ullamcorper. Nulla facilisi.</p>
-                <div class="player">
-                    <audio id="audio" controls autoplay loop> <!-- Added autoplay and loop attributes -->
-                        <source src="song1.wav" type="audio/mpeg">
-                        <source src="song2.wav" type="audio/mpeg">
-                        Your browser does not support the audio element.
-                    </audio>
-                </div>
-                <div class="library">
-                    <ul>
-                        <li><a href="#audio">Song 1</a></li> <!-- Changed the href attribute to the id of the audio element -->
-                        <li><a href="#audio">Song 2</a></li>
-                        <li><a href="#audio">Song 3</a></li>
-                    </ul>
+                <div class="player"> <!-- Added a display none property and replaced the audio element and the library list with a div element and a select element -->
+                    <select id="select">
+                        <option value="song1.wav">Song 1</option>
+                        <option value="song2.wav">Song 2</option>
+                        <option value="song3.wav">Song 3</option>
+                    </select>
                 </div>
             </div>
             <div id="contact" class="section">
