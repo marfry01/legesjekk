@@ -10,6 +10,7 @@
 <body>
     <div class="container">
         <div class="header">
+            <img src="logo.png" alt="Logo" class="logo"> <!-- Added a logo image -->
             <h1>Frydenborg</h1>
             <nav>
                 <ul>
@@ -45,15 +46,15 @@
                 <h2>Our Music</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lorem eu lorem consequat consequat. Morbi vitae leo quis nisi tincidunt tincidunt. Fusce quis augue id lorem sagittis ullamcorper. Quisque id nisl ut nisi aliquet ultrices. Donec quis lacus ut justo ullamcorper ullamcorper. Nulla facilisi.</p>
                 <div class="player">
-                    <audio id="audio" controls>
-                        <source src="song.mp3" type="audio/mpeg">
+                    <audio id="audio" controls autoplay loop> <!-- Added autoplay and loop attributes -->
+                        <source src="song.wav" type="audio/mpeg">
                         Your browser does not support the audio element.
                     </audio>
                 </div>
                 <div class="library">
                     <ul>
-                        <li><a href="song1.wav">Guitar medley</a></li>
-                        <li><a href="song2.wav">Livet uten bil</a></li>
+                        <li><a href="song1.wav">Song 1</a></li>
+                        <li><a href="song2.wav">Song 2</a></li>
                         <li><a href="song3.wav">Song 3</a></li>
                     </ul>
                 </div>
