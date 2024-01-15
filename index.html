@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Added a meta tag for responsiveness -->
     <title>Frydenborg</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- Added a link to Font Awesome for icons -->
     <script src="script.js"></script>
 </head>
 <body>
@@ -45,12 +46,10 @@
             <div id="music" class="section"> <!-- Added a display none property -->
                 <h2>Our Music</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lorem eu lorem consequat consequat. Morbi vitae leo quis nisi tincidunt tincidunt. Fusce quis augue id lorem sagittis ullamcorper. Quisque id nisl ut nisi aliquet ultrices. Donec quis lacus ut justo ullamcorper ullamcorper. Nulla facilisi.</p>
-                <div class="player"> <!-- Added a display none property and replaced the audio element and the library list with a div element and a select element -->
-                    <select id="select">
-                        <option value="song1.wav">Song 1</option>
-                        <option value="song2.wav">Song 2</option>
-                        <option value="song3.wav">Song 3</option>
-                    </select>
+                <div class="player"> <!-- Added a display none property and replaced the select element with a div element and added some icons for the play, pause, and mute buttons -->
+                    <i id="play" class="fas fa-play"></i>
+                    <i id="pause" class="fas fa-pause"></i>
+                    <i id="mute" class="fas fa-volume-mute"></i>
                 </div>
             </div>
             <div id="contact" class="section">
